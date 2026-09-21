@@ -1,0 +1,113 @@
+<html>
+
+  <head>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script> 
+    <!-- site pour A frame -->
+  </head>
+
+
+  <body>
+
+    <a-scene>
+
+      <a-assets>
+      
+
+        <img id="img1" class="nuage" src="./videos_mur/img1.jpeg">
+        <img id="img2" class="nuage" src="./videos_mur/img2.jpeg">
+        <img id="img3" class="nuage" src="./videos_mur/img3.jpeg">
+        <img id="img4" class="nuage" src="./videos_mur/img4.jpeg">
+        <img id="img5" class="nuage" src="./videos_mur/img5.jpeg">
+        <img id="img6" class="nuage" src="./videos_mur/img6.jpeg">
+
+        
+      </a-assets>
+
+    <!-- forme -->
+      <!--tout mes murs-->
+         <a-plane id="A"  material= "side: double; shader: standard; src: #img1" position="-1.99766 1.4902 -0.00403" rotation="0 180 0" width="4" height="3" geometry="width: 2.72" scale="1.1 1 1">
+         </a-plane>
+         <a-plane id="A2" material="side: double;shader: standard; src: #img2;transparent: true; opacity: 0.5" position="-1.99766 1.4902 -0.00403" rotation="0 180 0" width="4" height="3" geometry="width: 2.72" scale="1.1 1 1"></a-plane>
+
+         <a-plane id="B" material= "src: #img3;shader: standard; side: double"  position="-1.50824 1.51317 -3.99381" rotation="0 180 0" width="4" height="3">
+         </a-plane>
+         <a-plane id="B2" material= "src: #img4;shader: standard; side: double;transparent: true; opacity: 0.5"  position="-1.50824 1.51317 -3.99381" rotation="0 180 0" width="4" height="3">
+         </a-plane>
+
+         <a-plane id="C" material= "src: #img5;shader: standard;side: double" position="-3.49472 1.49423 -1.99774" rotation="0 90 0" width="4" height="3">
+         </a-plane>
+         <a-plane id="C2" material= "src: #img6;shader: standard;side: double;transparent: true; opacity: 0.5" position="-3.49472 1.49423 -1.99774" rotation="0 90 0" width="4" height="3">
+         </a-plane>
+
+         <a-plane id="D" material= "src: #img1;shader: standard; side: double" position="0.48732 1.49296 -1.51002" rotation="0 -90 0" width="4" height="3" scale="0.75 1 1">
+         </a-plane>
+         <a-plane id="D2" material= "src: #img3;shader: standard; side: double;transparent: true; opacity: 0.5" position="0.48732 1.49296 -1.51002" rotation="0 -90 0" width="4" height="3" scale="0.75 1 1">
+         </a-plane>
+       
+         <a-plane id="E" material= "src: #img2; shader: standard;side: double"position="-0.50043 1.4902 -2.99408" rotation="0 180.02 0" width="4" height="3" geometry="width: 2.72" scale="0.74 1 1">
+         </a-plane>
+         <a-plane id="E2" material= "src: #img3;shader: standard; side: double;transparent: true; opacity: 0.5"position="-0.50043 1.4902 -2.99408" rotation="0 180.02 0" width="4" height="3" geometry="width: 2.72" scale="0.74 1 1">
+         </a-plane>
+         <a-plane id="F" material= "src: #img4;shader: standard; side: double"position="-2.48568 1.50881 -2.96592" rotation="0 -90 0" width="4" height="3" geometry="width: 2.31" scale="0.9 1 1">
+         </a-plane>
+         <a-plane id="F2" material= "src: #img6;shader: standard; side: double;transparent: true; opacity: 0.5"position="-2.48568 1.50881 -2.96592" rotation="0 -90 0" width="4" height="3" geometry="width: 2.31" scale="0.9 1 1">
+         </a-plane>
+         <a-plane id="G" material= "src: #img1; shader: standard;side: double"position="-1.49558 1.48425 -2.00083" rotation="0 90 0" width="4" height="3" geometry="width: 2.99" scale="0.67 1 1">
+         </a-plane>
+         <a-plane id="G2" material= "src: #img4;shader: standard; side: double;transparent: true; opacity: 0.5"position="-1.49558 1.48425 -2.00083" rotation="0 90 0" width="4" height="3" geometry="width: 2.99" scale="0.67 1 1">
+         </a-plane>
+         <a-plane id="H" material= "src: #img2;shader: standard; side: double"position="-0.50449 1.48425 -0.99907" rotation="0 -90 0" width="4" height="3" geometry="width: 1.99">
+         </a-plane>
+         <a-plane id="H2" material= "src: #img3;shader: standard; side: double;transparent: true; opacity: 0.5"position="-0.50449 1.48425 -0.99907" rotation="0 -90 0" width="4" height="3" geometry="width: 1.99">
+         </a-plane>
+         <a-plane id="I" material= "src: #img3; shader: standard;side: double" position="-2.94335 1.48425 -0.99765" rotation="0 -180 0" width="4" height="3" geometry="width: 0.57" scale="1.93 1 1">
+         </a-plane>
+         <a-plane id="I2" material= "src: #img6;shader: standard; side: double;transparent: true; opacity: 0.5" position="-2.94335 1.48425 -0.99765" rotation="0 -180 0" width="4" height="3" geometry="width: 0.57" scale="1.93 1 1">
+         </a-plane>
+        
+         <!--idee : mes murs avec textures transparentes, diff couches, qui bougent (animation/video au lieu de img)= effet de tortion quand on avance-->
+         
+      
+    <!-- envirronement -->  
+     
+     <a-plane id="sol"  material= "side: double; src: #img4" position="-1.49727 0 -1.99218" rotation="-90 0 0" width="4" height="4" >
+     </a-plane>
+     <a-plane id="sol2"  material= "side: double; src: #img1;transparent: true; opacity: 0.5" position="-1.49727 0 -1.99218" rotation="-90 0 0" width="4" height="4" >
+     </a-plane>
+     <a-plane id="toit" material= "side: double; src: #img5"position="-1.49727 3.00059 -1.99218" rotation="-90 0 0" width="4" height="4">
+     </a-plane>
+     <a-plane id="toit2" material= "side: double; src: #img2;transparent: true; opacity: 0.5"position="-1.49727 3.00059 -1.99218" rotation="-90 0 0" width="4" height="4">
+     </a-plane>
+
+      <a-sky color="#000000"></a-sky>
+
+  
+
+    <a-light
+      type="ambient"
+      color="#444444"
+      intensity="0.15">
+    </a-light>
+
+    <a-entity id="cameraRig">
+        <a-camera position="0 1.6 0">
+
+          <a-light
+           type="point"
+           color="#FFD27F"
+           intensity="3"
+           distance="4"
+           decay="1.5">
+          </a-light>
+
+        </a-camera>
+    </a-entity>
+
+      
+
+      
+    </a-scene>
+
+ </body>
+
+</html>
