@@ -1,0 +1,72 @@
+<html>
+
+  <head>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script> 
+    <!-- site pour A frame -->
+  </head>
+
+
+  <body>
+
+    <a-scene>
+
+      <a-assets>
+        <a-asset-item id="obj-tuyaux" src="./models3D/Industrial_Pipes_Obj/Industrial_Pipes.obj"></a-asset-item>
+        
+      </a-assets>
+
+
+    <!--tout mes éléments-->
+
+        
+       
+        <a-entity obj-model="obj:#obj-tuyaux" position="-0.27144 0.81299 -0.7871" width="4" height="4" scale="1 1 1" id="tuyaux" rotation="0 180 0"></a-entity>
+        
+       
+
+        
+     
+
+    <!-- forme -->
+      <!--tout mes murs-->
+        
+         
+        
+         <a-plane id="B" material="side: double" position="0.01197 1.51317 -1.98435" rotation="0 180 0" width="4" height="3" scale="1.01 1 1"color="red">
+         </a-plane>
+        
+
+      
+         <a-plane id="C" material="side: double" position="-1.99588 1.49423 0.0017" rotation="0 90 0" width="4" height="3" color="red">
+         </a-plane>
+       
+
+      
+         <a-plane id="D" material="side: double" position="2.01966 1.49296 -0.0249" rotation="0 -90 0" width="4" height="3">
+         </a-plane>
+        
+  
+         
+      
+    <!-- envirronement -->  
+     
+     <a-light type="point" color="#FFD27F" intensity="3" distance="4" decay="1.5"></a-light>
+
+     <a-plane id="sol" material="side: double" position="-0.0027 0 -0.00557" rotation="-90 0 0" width="4" height="4">
+     </a-plane>
+
+     <a-plane id="toit" material="side: double" position="0.01137 3.00059 -0.01401" rotation="-90 0 0" width="4" height="4">
+     </a-plane>
+    
+      <a-sky 
+      color="#ECECEC">
+      </a-sky>
+
+      
+
+      
+    </a-scene>
+
+ </body>
+
+</html>
