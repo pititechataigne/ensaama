@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ma scène 3D</title>
+
+  <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+</head>
+
+<body>
+
+  <a-scene>
+
+    <!-- =========================
+         MODÈLE 3D
+         ========================= -->
+
+    <a-assets>
+
+      <a-asset-item
+        id="mon-modele"
+        src="./models3D/security_camera_01_4k.blend/security_camera_01_4k.glb">
+      </a-asset-item>
+
+    </a-assets>
+
+
+    <!-- =========================
+         MUR DE CAMÉRAS
+         ========================= -->
+
+    <a-entity id="mur-cameras"></a-entity>
+
+
+    <!-- =========================
+         MURS
+         ========================= -->
+
+    <a-plane
+      id="B"
+      position="0.01197 1.51317 -1.98435"
+      rotation="0 180 0"
+      width="4"
+      height="3"
+      material="side: double; color: red">
+    </a-plane>
+
+    <a-plane
+      id="C"
+      position="-1.99588 1.49423 0.0017"
+      rotation="0 90 0"
+      width="4"
+      height="3"
+      material="side: double; color: red">
+    </a-plane>
+
+    <a-plane
+      id="D"
+      position="2.01966 1.49296 -0.0249"
+      rotation="0 -90 0"
+      width="4"
+      height="3">
+    </a-plane>
+
+
+    <!-- =========================
+         SOL
+         ========================= -->
+
+    <a-plane
+      id="sol"
+      position="-0.0027 0 -0.00557"
+      rotation="-90 0 0"
+      width="4"
+      height="4"
+      material="side: double; color: #808080">
+    </a-plane>
+
+
+    <!-- =========================
+         PLAFOND
+         ========================= -->
+
+    <a-plane
+      id="toit"
+      position="0.01137 3.00059 -0.01401"
+      rotation="-90 0 0"
+      width="4"
+      height="4"
+      material="side: double; color: #eeeeee">
+    </a-plane>
+
+
+    <!-- =========================
+         ÉCLAIRAGE
+         ========================= -->
+
+    <a-light
+      type="ambient"
+      color="#ffffff"
+      intensity="0.5">
+    </a-light>
+
+    <a-light
+      type="point"
+      color="#FFD27F"
+      intensity="3"
+      distance="4"
+      decay="1.5"
+      position="0 2.5 -1">
+    </a-light>
+
+
+    <!-- =========================
+         CIEL
+         ========================= -->
+
+    <a-sky color="#ECECEC"></a-sky>
+
+
+    <!-- =========================
+         CAMÉRA DU JOUEUR
+         ========================= -->
+
+    <a-camera position="0 1.6 4"></a-camera>
+
+
+  </a-scene>
+
+
+  <!-- =========================
+       GÉNÉRATION DES CAMÉRAS
+       ========================= -->
+
+  <script>
+
+    const mur = document.querySelector("#mur-cameras");
+
+    const nombreColonnes = 5;
+    const nombreRangees = 4;
+
+    const espacementX = 0.75;
+    const espacementY = 0.7;
+
+    const profondeur = -1.80;
+
+    for (let ligne = 0; ligne < nombreRangees; ligne++) {
+
+      for (let colonne = 0; colonne < nombreColonnes; colonne++) {
+
+        const camera = document.createElement("a-entity");
+
+        // Position horizontale
+        const x =
+          (colonne - (nombreColonnes - 1) / 2)
+          * espacementX;
+
+        // Position verticale
+        const y =
+          0.5 + ligne * espacementY;
+
+        // Taille variable
+        const taille =
+          1 + Math.random() * 1;
+
+        // Position
+        camera.setAttribute(
+          "position",
+          `${x} ${y} ${profondeur}`
+        );
+
+        // Modèle 3D
+        camera.setAttribute(
+          "gltf-model",
+          "#mon-modele"
+        );
+
+        // Taille
+        camera.setAttribute(
+          "scale",
+          `${taille} ${taille} ${taille}`
+        );
+
+        // Rotation
+        camera.setAttribute(
+          "rotation",
+          "0 0 0"
+        );
+
+        // Ajout au mur
+        mur.appendChild(camera);
+      }
+    }
+
+  </script>
+
+</body>
+
+</html>
