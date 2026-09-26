@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ma scène 3D</title>
+
+  <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+</head>
+
+<body>
+
+<a-scene keyboard-shortcuts="" screenshot="" xr-mode-ui="" device-orientation-permission-ui="">
+
+    <!-- MODÈLES 3D -->
+
+    <a-assets>
+
+      <a-asset-item id="monitor" src="./models3D/Monitor/monitor.glb">
+      </a-asset-item>
+
+    </a-assets>
+
+
+    <!-- MONITEURS B -->
+
+    <a-entity id="monitor-B-01" gltf-model="./models3D/Monitor/monitor.glb" position="1.778 3.45509 -2.0336" scale="0.1 0.8 0.1" rotation="0 0 165.71142646553182">
+    </a-entity>
+
+    <a-entity id="monitor-B-02" gltf-model="./models3D/Monitor/monitor.glb" position="0.34233 1.98012 -2.05335" scale="0.3 0.6 0.1" rotation="0 0.4938896194027696 -78.57485906644597">
+    </a-entity>
+
+    <a-entity id="monitor-B-03" gltf-model="./models3D/Monitor/monitor.glb" position="0 0.03596 -2.20411" scale="0.2 0.2 0.2">
+    </a-entity>
+
+    <a-entity id="monitor-B-04" gltf-model="./models3D/Monitor/monitor.glb" position="0 1.69726 -2.10071" scale="0.2 0.5 0.1" rotation="0 0 -22.5367219136758">
+    </a-entity>
+
+    <a-entity id="monitor-B-05" gltf-model="./models3D/Monitor/monitor.glb" position="-1.91296 0.35449 -2.11973" scale="0.3 0.6 0.1" rotation="0 -7.760713335047 -73.44631384222997">
+    </a-entity>
+
+    <a-entity id="monitor-B-06" gltf-model="./models3D/Monitor/monitor.glb" position="2.05058 0.84265 -2.24316" scale="0.2 0.2 0.2" rotation="0 0 89.6913862075742">
+    </a-entity>
+
+    <a-entity id="monitor-B-07" gltf-model="./models3D/Monitor/monitor.glb" position="-0.96747 1.58244 -2.09574" scale="0.5 0.5 0.1" rotation="0 0 -8.009377018133778">
+    </a-entity>
+
+    <a-entity id="monitor-B-08" gltf-model="./models3D/Monitor/monitor.glb" position="-1.46015 0.68669 -2.0599" scale="0.3 0.6 0.1">
+    </a-entity>
+
+    <a-entity id="monitor-B-09" gltf-model="./models3D/Monitor/monitor.glb" position="-1.71218 0.83745 -2.26832" scale="0.2 0.2 0.2" rotation="8.995437383553927 -11.200751937012463 -51.706003263786016">
+    </a-entity>
+
+    <a-entity id="monitor-B-10" gltf-model="./models3D/Monitor/monitor.glb" position="0.61152 0.77821 -2.05287" scale="0.5 0.5 0.1" rotation="0 0 44.81675873513299">
+    </a-entity>
+
+    <a-entity id="monitor-B-11" gltf-model="./models3D/Monitor/monitor.glb" position="1.03869 0.03596 -2.0062" scale="0.3 0.6 0.1">
+    </a-entity>
+
+    <a-entity id="monitor-B-12" gltf-model="./models3D/Monitor/monitor.glb" position="-0.72695 1.24397 -2.28811" scale="0.2 0.2 0.2" rotation="13.91198822357152 0 0">
+    </a-entity>
+
+
+    <!-- MONITEURS C -->
+
+    <a-entity id="monitor-C-01" gltf-model="./models3D/Monitor/monitor.glb" position="-2.10357 3.33864 0.11209" scale="0.1 0.8 0.1" rotation="0 90 165.71142646553182">
+    </a-entity>
+
+    <a-entity id="monitor-C-02" gltf-model="./models3D/Monitor/monitor.glb" position="-2.08139 1.98012 -0.33036" scale="0.3 0.6 0.1" rotation="0 90.49388961940276 -78.57485906644597">
+    </a-entity>
+
+    <a-entity id="monitor-C-03" gltf-model="./models3D/Monitor/monitor.glb" position="-2.24923 0.52982 0.07458" scale="0.2 0.2 0.2" rotation="-13.550451854843969 83.95779755170005 -156.56415526626822">
+    </a-entity>
+
+    <a-entity id="monitor-C-04" gltf-model="./models3D/Monitor/monitor.glb" position="-2.06849 1.80148 0" scale="0.2 0.5 0.1" rotation="0 90 -22.5367219136758">
+    </a-entity>
+
+    <a-entity id="monitor-C-05" gltf-model="./models3D/Monitor/monitor.glb" position="-2.16238 0.35449 1.91296" scale="0.3 0.6 0.1" rotation="0 82.239286664953 -73.44631384222997">
+    </a-entity>
+
+    <a-entity id="monitor-C-06" gltf-model="./models3D/Monitor/monitor.glb" position="-2.31452 0.26286 -2.05058" scale="0.2 0.2 0.2" rotation="0 90 89.6913862075742">
+    </a-entity>
+
+    <a-entity id="monitor-C-07" gltf-model="./models3D/Monitor/monitor.glb" position="-2.13201 1.63555 0.96747" scale="0.5 0.5 0.1" rotation="0 90 -8.009377018133778">
+    </a-entity>
+
+    <a-entity id="monitor-C-08" gltf-model="./models3D/Monitor/monitor.glb" position="-2.05 0.71886 1.46015" scale="0.3 0.6 0.1" rotation="0 90 0">
+    </a-entity>
+
+    <a-entity id="monitor-C-09" gltf-model="./models3D/Monitor/monitor.glb" position="-2.28652 0.83745 1.71218" scale="0.2 0.2 0.2" rotation="8.995437383553927 78.79924806298754 -51.706003263786016">
+    </a-entity>
+
+    <a-entity id="monitor-C-10" gltf-model="./models3D/Monitor/monitor.glb" position="-2.05 0.77821 -0.61152" scale="0.5 0.5 0.1" rotation="0 90 44.81675873513299">
+    </a-entity>
+
+    <a-entity id="monitor-C-11" gltf-model="./models3D/Monitor/monitor.glb" position="-2.05 0.03596 -1.03869" scale="0.3 0.6 0.1" rotation="0 90 0">
+    </a-entity>
+
+    <a-entity id="monitor-C-12" gltf-model="./models3D/Monitor/monitor.glb" position="-2.32197 1.24397 0.66812" scale="0.2 0.2 0.2" rotation="13.91198822357152 90 0">
+    </a-entity>
+
+
+    <!-- MONITEURS D -->
+
+    <a-entity id="monitor-D-01" gltf-model="./models3D/Monitor/monitor.glb" position="2.05 2.22751 -0.22984" scale="0.1 0.8 0.1" rotation="0 -90 165.71142646553182">
+    </a-entity>
+
+    <a-entity id="monitor-D-02" gltf-model="./models3D/Monitor/monitor.glb" position="2.05 2.23149 0.45969" scale="0.3 0.6 0.1" rotation="0 -89.50611038059724 -78.57485906644597">
+    </a-entity>
+
+    <a-entity id="monitor-D-03" gltf-model="./models3D/Monitor/monitor.glb" position="2.20857 0.03596 -0.13215" scale="0.2 0.2 0.2" rotation="0 -90 0">
+    </a-entity>
+
+    <a-entity id="monitor-D-04" gltf-model="./models3D/Monitor/monitor.glb" position="2.13667 0.38384 -0.33935" scale="0.2 0.5 0.1" rotation="3.323155211758775 -90.00021045914971 -22.5367219136758">
+    </a-entity>
+
+    <a-entity id="monitor-D-05" gltf-model="./models3D/Monitor/monitor.glb" position="2.19288 0.38202 -0.0883" scale="0.3 0.6 0.1" rotation="0 -97.760713335047 -73.44631384222997">
+    </a-entity>
+
+    <a-entity id="monitor-D-06" gltf-model="./models3D/Monitor/monitor.glb" position="2.05 0.84265 -2.05058" scale="0.2 0.2 0.2" rotation="0 -90 89.6913862075742">
+    </a-entity>
+
+    <a-entity id="monitor-D-07" gltf-model="./models3D/Monitor/monitor.glb" position="2.01833 1.58244 0.15979" scale="0.5 0.5 0.1" rotation="0.5173808890031334 -93.83501698196031 -8.044327443636758">
+    </a-entity>
+
+    <a-entity id="monitor-D-08" gltf-model="./models3D/Monitor/monitor.glb" position="2.1699 0.68669 1.46015" scale="0.3 0.6 0.1" rotation="0 -90 0">
+    </a-entity>
+
+    <a-entity id="monitor-D-09" gltf-model="./models3D/Monitor/monitor.glb" position="1.97431 0.71759 1.83663" scale="0.2 0.2 0.2" rotation="8.995437383553927 -101.20075193701246 -51.706003263786016">
+    </a-entity>
+
+    <a-entity id="monitor-D-10" gltf-model="./models3D/Monitor/monitor.glb" position="2.11908 1.8712 -0.61152" scale="0.5 0.5 0.1" rotation="5.582900755754742 -90.00021045914971 44.81675873513299">
+    </a-entity>
+
+    <a-entity id="monitor-D-11" gltf-model="./models3D/Monitor/monitor.glb" position="2.13499 0.03596 -1.35418" scale="0.3 0.6 0.1" rotation="0 -90 0">
+    </a-entity>
+
+    <a-entity id="monitor-D-12" gltf-model="./models3D/Monitor/monitor.glb" position="2.28284 1.38877 0.72695" scale="0.2 0.2 0.2" rotation="17.541675855725284 -90.00021045914971 0">
+    </a-entity>
+
+
+    <!-- MURS -->
+
+    <a-plane id="B" position="0.01197 1.51317 -1.98435" rotation="0 180 0" width="4" height="3" material="side: double; color: red">
+    </a-plane>
+
+    <a-plane id="C" position="-1.99588 1.49423 0.0017" rotation="0 90 0" width="4" height="3" material="side: double; color: red">
+    </a-plane>
+
+    <a-plane id="D" position="2.01966 1.49296 -0.0249" rotation="0 -90 0" width="4" height="3">
+    </a-plane>
+
+
+    <!-- SOL -->
+
+    <a-plane id="sol" position="-0.0027 0 -0.00557" rotation="-90 0 0" width="4" height="4" material="side: double; color: #808080">
+    </a-plane>
+
+
+    <!-- PLAFOND -->
+
+    <a-plane id="toit" position="0.01137 3.00059 -0.01401" rotation="-90 0 0" width="4" height="4" material="side: double; color: #eeeeee">
+    </a-plane>
+
+
+    <!-- ÉCLAIRAGE -->
+
+    <a-light type="ambient" color="#ffffff" intensity="0.5">
+    </a-light>
+
+    <a-light type="point" color="#FFD27F" intensity="3" distance="4" decay="1.5" position="0 2.5 -1">
+    </a-light>
+
+
+    <!-- CIEL -->
+
+    <a-sky color="#ECECEC"></a-sky>
+
+
+    <!-- CAMÉRA -->
+
+    <a-camera position="0 1.6 4"></a-camera>
+
+  </a-scene>
+
+
+
+
+
+
+</body>
+
+</html>
