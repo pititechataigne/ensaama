@@ -4,15 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>What a Mess !</title>
 
-  <title>Ma scène 3D</title>
 
   <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+  <script src="./debug.js"></script> 
+  <script src="https://ensaama-officiel-numerique.github.io/components/debug/debug.js"></script>
+  <script src="./effects-model.js"></script> 
+  <script src="https://ensaama-officiel-numerique.github.io/components/effects/test3_notoggle/effects-model.js"></script>
 </head>
 
 <body>
 
-<a-scene keyboard-shortcuts="" screenshot="" xr-mode-ui="" device-orientation-permission-ui="">
+<a-scene keyboard-shortcuts="" screenshot="" xr-mode-ui="" device-orientation-permission-ui=""
+  debug-keyboard="key: e, r, t, y, u, i ; 
+      event: wireframe, transparent, desappear, delete, bluescreen, reboot; 
+      target: #fumee, #fumee, #fumee, #fumee, #fumee, #fumee">
 
     <!-- MODÈLES 3D -->
 
@@ -20,8 +28,33 @@
 
       <a-asset-item id="monitor" src="./models3D/Monitor/monitor.glb">
       </a-asset-item>
+       <a-asset-item id="obj-fumee" src="./models3D/fumee/Project Name.obj">
+      </a-asset-item>
+       <a-asset-item id="mtl-fumee" src="./models3D/fumee/Project Name.mtl">
+      </a-asset-item>
 
     </a-assets>
+
+     <!-- SMOKE 1 -->
+     
+     
+      
+      <a-entity 
+            id="fumee" obj-model="obj: #obj-fumee; mtl: #mtl-fumee"  position="-0.69726 0.82251 -0.73252" scale="0.02 0.02 0.02" rotation="-39.501429269704346 162.6122977516692 -19.141946977525674"
+            model-wireframe 
+            model-transparent="opacity: 0.2" 
+            model-desappear="opacity: 0.1; duration: 3000"
+            model-delete
+            model-bluescreen="color: cyan; duration: 1000"
+            model-reboot="duration: 5000; frequency: 8; slowdown: true; attempts: 10">
+      </a-entity>
+    
+    
+
+
+
+
+
 
 
     <!-- MONITEURS B -->
@@ -181,7 +214,7 @@
 
     <!-- CAMÉRA -->
 
-    <a-camera position="0 1.6 4"></a-camera>
+    <a-camera position="0 1.6 1.0077724414435918" id="camera"></a-camera>
 
   </a-scene>
 
