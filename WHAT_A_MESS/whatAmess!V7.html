@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>What a Mess !</title>
+
+
+  <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+  <script src="./debug.js"></script> 
+  <script src="https://ensaama-officiel-numerique.github.io/components/debug/debug.js"></script>
+  <script src="./effects-model.js"></script> 
+  <script src="./effects-perso.js"></script> 
+  <script src="https://ensaama-officiel-numerique.github.io/components/effects/test3_notoggle/effects-model.js"></script>
+</head>
+
+<body>
+
+  <a-scene keyboard-shortcuts="" screenshot="" xr-mode-ui="" device-orientation-permission-ui="" debug-keyboard="key: e, r, t, y, u, i; target: #fumee, #fumee, #fumee, #fumee, #fumee, #fumee; event: wireframe, transparent, desappear, delete, bluescreen, reboot">
+
+    <!-- MODÈLES 3D -->
+
+    <a-assets>
+
+      <a-asset-item id="monitor" src="./models3D/Monitor/monitor.glb">
+      </a-asset-item>
+      <a-asset-item id="explosion-image" src="./models3D/image_explosion.jpg">
+      </a-asset-item>
+       <!-- <a-asset-item id="obj-fumee" src="./models3D/fumee/Project Name.obj">
+      </a-asset-item>
+       <a-asset-item id="mtl-fumee" src="./models3D/fumee/Project name.mtl">
+      </a-asset-item> -->
+
+    </a-assets>
+
+     <!-- SMOKE 1 -->
+     
+
+      <a-entity id="fumee" obj-model="" position="-0.69726 0.82251 -0.73252" scale="0.02 0.02 0.02" rotation="-39.501429269704346 162.6122977516692 -19.141946977525674" model-wireframe="" model-transparent="" model-desappear="opacity: 0.1; duration: 3000" model-delete="" model-bluescreen="color: cyan; duration: 1000" model-reboot="duration: 5000; attempts: 10">
+      </a-entity>
+    
+  
+
+    <!-- MONITEURS B -->
+
+    <a-entity id="monitor-B-01" gltf-model="./models3D/Monitor/monitor.glb" position="0.63213 4.76823 -2.23475" scale="0.1 0.8 0.36" rotation="30.90763530053713 -9.218890923654945 -179.87437020337066">
+    </a-entity>
+
+    <a-entity id="monitor-B-02" gltf-model="./models3D/Monitor/monitor.glb" position="1.62011 3.52003 -3.42469" scale="0.3 0.6 0.6" rotation="25.91144332699635 -48.221273953800356 -101.59515735921218">
+    </a-entity>
+
+    <a-entity id="monitor-B-03" gltf-model="./models3D/Monitor/monitor.glb" position="3.20221 1.95237 -3.21556" scale="0.34634 0.34634 0.86584" rotation="2.5914881073767133 -67.93789759984223 -98.43128441449979">
+    </a-entity>
+
+    <a-entity id="monitor-B-04" gltf-model="./models3D/Monitor/monitor.glb" position="1.4449 1.30603 -3.6912" scale="0.34 0.52 0.53" rotation="9.390778262194193 -39.062543598634136 -31.090981794978994">
+    </a-entity>
+
+    <a-entity id="monitor-B-05" gltf-model="./models3D/Monitor/monitor.glb" position="-1.27205 0.37033 -3.59481" scale="0.3 0.6 0.49" rotation="-16.254239690066324 -7.057121162626351 -74.25475729115958">
+    </a-entity>
+
+    <a-entity id="monitor-B-06" gltf-model="./models3D/Monitor/monitor.glb" position="0.46784 0.16542 -3.41344" scale="0.2 0.2 0.42" rotation="-14.352592768027122 17.996604345059158 88.00860916327497">
+    </a-entity>
+
+    <a-entity id="monitor-B-07" gltf-model="./models3D/Monitor/monitor.glb" position="0.10796 0.86427 -3.43238" scale="0.29181 0.29181 0.27836" rotation="2.294123011703816 -0.3231481964537843 -8.015679553880217">
+    </a-entity>
+
+    <a-entity id="monitor-B-08" gltf-model="./models3D/Monitor/monitor.glb" position="-1.04893 3.52143 -3.79207" scale="0.3 0.6 0.71" rotation="41.70617086536775 19.895959435917838 11.44254012655767">
+    </a-entity>
+
+    <a-entity id="monitor-B-09" gltf-model="./models3D/Monitor/monitor.glb" position="-0.75638 2.33712 -4.36442" scale="0.2 0.2 0.92" rotation="26.87974200076744 -13.939490197737799 -54.99306213445155">
+    </a-entity>
+
+    <a-entity id="monitor-B-11" gltf-model="./models3D/Monitor/monitor.glb" position="1.99223 -0.27377 -3.05977" scale="0.3 0.6 0.57" rotation="0 -40.53733696330087 0">
+    </a-entity>
+
+    <a-entity id="monitor-B-12" gltf-model="./models3D/Monitor/monitor.glb" position="-2.80783 -0.62467 -3.80938" scale="0.30614 0.98046 1.05615" rotation="-2.880831793917779 39.751238868381385 4.7125778649510215">
+    </a-entity>
+
+
+
+     <!-- Moniteur B-10 -->
+     
+      <a-entity id="monitor-B-10" gltf-model="./models3D/Monitor/monitor.glb" position="0.14862 2.26063 -4.40569" scale="0.5 0.5 0.75" rotation="18.147865202973698 8.241997882956893 41.17389307369122"></a-entity>
+      <!-- Plan semi-transparent devant le moniteur -->
+      
+      <a-plane id="image-explosion" src="#image_explosion.jpg" position="-0.13366 2.34778 -2.63011" rotation="-7.371674992153172 179.0928557708122 141.10117029127758" width="0.8" height="0.5" material="depthWrite: false; opacity: 0.35; shader: flat; side: double; transparent: true; color: #ffaa00" scale="1.87 1.74 1"></a-plane>
+      <!-- Spot placé en retrait, derrière le plan -->
+      
+       <a-entity id="screen-light-B-10" position="0.25754 2.27456 -1.70711" light="angle: 45; color: #ffaa00; decay: -3.83; distance: 4.79; intensity: 3.84; penumbra: 1; type: spot; castShadow: true; shadowCameraFar: 499.98; shadowCameraFov: 90.05; shadowBias: -0.88; shadowCameraBottom: -5.22; shadowCameraNear: 1.4" rotation="-54.23962263385451 179.24239775534133 0" scale="0.11 0.1 0.56779"></a-entity>
+    
+    
+    <!-- MURS -->
+
+    <a-sphere id="B" position="0.01197 1.61671 -0.11254" rotation="9.837685342396234 179.9998479605043 0" width="4" height="3" material="side: back; blending: none; color: red" scale="2.95 2.99406 2.85">
+    </a-sphere>
+    
+
+  
+    <!-- SOL -->
+    
+    <a-plane id="sol" position="-0.0027 0 -0.88281" rotation="-90 0 0" width="4" height="4" material="side: double; color: #808080" scale="0.35705 0.30896 0.61662">
+    </a-plane>
+
+
+
+    <!-- ÉCLAIRAGE -->
+     <a-entity light="color: #BBB; intensity: 1; type: ambient"></a-entity>
+
+     <a-entity light="intensity: 0; castShadow: true" position="-0.5 1 1"></a-entity>
+
+    <!-- CIEL -->
+
+    <a-sky color="#000005"></a-sky>
+
+
+    <!-- CAMÉRA -->
+
+    
+    <a-camera position="0 1.6 -0.7666331891427989" id="camera"></a-camera>
+
+  </a-scene>
+
+
+
+
+
+
+</body>
+
+</html>
