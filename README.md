@@ -10,3 +10,5 @@
 
 ### WHAT A MESS !
 * [WhatAmessV3](./WHAT_A_MESS/whatAmess!V3.html)
+* [WhatAmessV6](./WHAT_A_MESS/whatAmess!V6.html)
+* [WhatAmessV7](./WHAT_A_MESS/whatAmess!V7.html)
