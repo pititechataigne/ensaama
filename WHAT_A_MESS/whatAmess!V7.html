@@ -14,6 +14,8 @@
   <script src="./effects-model.js"></script> 
   <script src="./effects-perso.js"></script> 
   <script src="https://ensaama-officiel-numerique.github.io/components/effects/test3_notoggle/effects-model.js"></script>
+
+  
 </head>
 
 <body>
@@ -26,8 +28,21 @@
 
       <a-asset-item id="monitor" src="./models3D/Monitor/monitor.glb">
       </a-asset-item>
-      <a-asset-item id="explosion-image" src="./models3D/image_explosion.jpg">
-      </a-asset-item>
+      <img id="explosion-image1" class="img-explosionS" src="./models3D/image_explosion.jpg">
+      </img>
+      <img id="explosion-image2" class="img-explosionS" src="./models3D/img_explosion2.jpg">
+      </img>
+      <img id="explosion-image3" class="img-explosionS" src="./models3D/img_explosion3.jpg">
+      </img>
+      <img id="explosion-image4" class="img-explosionS" src="./models3D/img_explosion4.jpg">
+      </img>
+      <img id="explosion-image5" class="img-explosionS" src="./models3D/img_explosion5.jpg">
+      </img>
+      <img id="explosion-image6" class="img-explosionS" src="./models3D/img_explosion6.jpg">
+      </img>
+      <img id="explosion-image7" class="img-explosionS" src="./models3D/img_explosion7.jpg">
+      </img>
+      
        <!-- <a-asset-item id="obj-fumee" src="./models3D/fumee/Project Name.obj">
       </a-asset-item>
        <a-asset-item id="mtl-fumee" src="./models3D/fumee/Project name.mtl">
@@ -43,34 +58,70 @@
     
   
 
-    <!-- MONITEURS B -->
+    <!-- MONITEURS -->
 
-    <a-entity id="monitor-B-01" gltf-model="./models3D/Monitor/monitor.glb" position="0.63213 4.76823 -2.23475" scale="0.1 0.8 0.36" rotation="30.90763530053713 -9.218890923654945 -179.87437020337066">
+    <!-- 1 -->
+    <a-entity id="monitor-B-01" gltf-model="./models3D/Monitor/monitor.glb" position="-0.11823 4.38246 -2.63483" scale="0.1 0.8 0.36" rotation="32.9536675869493 -26.47809858638073 -146.5408315982496">
     </a-entity>
+    <!-- Plan devant le moniteur -->
+    <a-plane id="image-explosion2" class="img-explosionS" src="#explosion-image2" position="0.46571 3.11356 -2.26184" width="0.7" height="0.45" rotation="36.514600283687365 -23.875724280896534 -54.56678153487422" material="shader: flat; side: double" scale="2.03251 0.55656 1">
+    </a-plane>
 
+    <!-- 2 -->
     <a-entity id="monitor-B-02" gltf-model="./models3D/Monitor/monitor.glb" position="1.62011 3.52003 -3.42469" scale="0.3 0.6 0.6" rotation="25.91144332699635 -48.221273953800356 -101.59515735921218">
     </a-entity>
+    <!-- Plan devant le moniteur -->
+    <a-plane id="image-explosion3" class="img-explosionS" src="#explosion-image3" position="1.45735 2.80194 -2.03849" rotation="-27.65896460214536 140.524774749376 7.784204604647365" width="0.8" height="0.5" material="shader: flat; side: double" scale="1.33911 1.68886 0.62184">
+    </a-plane>
 
+    <!-- 3 -->
     <a-entity id="monitor-B-03" gltf-model="./models3D/Monitor/monitor.glb" position="3.20221 1.95237 -3.21556" scale="0.34634 0.34634 0.86584" rotation="2.5914881073767133 -67.93789759984223 -98.43128441449979">
     </a-entity>
+    <!-- Plan devant le moniteur -->
+     <a-plane id="image-explosion4" class="img-explosionS" src="#explosion-image4" position="1.75381 1.79643 -2.03207" rotation="-4.966398168193975 133.22643835499954 -83.48396145512686" width="0.8" height="0.5" material="shader: flat; side: double" scale="1.28192 1.21987 0.95761">
+      </a-plane>
 
+    <!-- 4 -->
     <a-entity id="monitor-B-04" gltf-model="./models3D/Monitor/monitor.glb" position="1.4449 1.30603 -3.6912" scale="0.34 0.52 0.53" rotation="9.390778262194193 -39.062543598634136 -31.090981794978994">
     </a-entity>
+    <!-- Plan devant le moniteur -->
+    <a-plane id="image-explosion2" class="img-explosionS" src="#explosion-image2" position="1.02235 1.82655 -2.4978" rotation="1.5085978745794575 -34.3459550291172 -30.052782270201938" width="0.8" height="0.5" material="shader: flat; side: double" scale="1.2744 1.71366 0.8828">
+    </a-plane>
 
+    <!-- 5 -->
     <a-entity id="monitor-B-05" gltf-model="./models3D/Monitor/monitor.glb" position="-1.27205 0.37033 -3.59481" scale="0.3 0.6 0.49" rotation="-16.254239690066324 -7.057121162626351 -74.25475729115958">
     </a-entity>
+     <!-- Plan devant le moniteur -->
+    <a-plane id="image-explosion5" class="img-explosionS" src="#explosion-image5" position="-0.47684 0.8993 -2.5935" rotation="-17.99030180931272 0.0320856365273261 13.68280510551919" width="0.8" height="0.5" material="shader: flat; side: double" scale="1.2744 1.71366 0.8828">
+    </a-plane>
 
+    <!-- 6 -->
     <a-entity id="monitor-B-06" gltf-model="./models3D/Monitor/monitor.glb" position="0.46784 0.16542 -3.41344" scale="0.2 0.2 0.42" rotation="-14.352592768027122 17.996604345059158 88.00860916327497">
     </a-entity>
+    <!-- Plan devant le moniteur -->
+    <a-plane id="image-explosion6" class="img-explosionS" src="#explosion-image6" position="0.41614 0.39806 -2.51994" scale="0.7129 0.6873 0.21096" rotation="-15.153014807824881 -0.11000789666511807 -86.52350255829587" width="0.8" height="0.5" material="shader: flat; side: double">
+    </a-plane>
 
-    <a-entity id="monitor-B-07" gltf-model="./models3D/Monitor/monitor.glb" position="0.10796 0.86427 -3.43238" scale="0.29181 0.29181 0.27836" rotation="2.294123011703816 -0.3231481964537843 -8.015679553880217">
+    <!-- 7 -->
+    <a-entity id="monitor-B-07" class="img-explosionS" gltf-model="./models3D/Monitor/monitor.glb" position="0.10796 0.86427 -3.43238" scale="0.29181 0.29181 0.27836" rotation="2.294123011703816 -0.3231481964537843 -8.015679553880217">
     </a-entity>
+    <!-- Plan devant le moniteur -->
+    <a-plane id="image-explosion7" class="img-explosionS" src="#explosion-image7" position="0.17325 1.29929 -2.83294" scale="1.02448 0.9877 0.30316" rotation="-5.757079925474512 0.8027138709782833 -9.271603040806982" width="0.8" height="0.5" material="shader: flat; side: double">
+    </a-plane>
 
+    <!-- 8 -->
     <a-entity id="monitor-B-08" gltf-model="./models3D/Monitor/monitor.glb" position="-1.04893 3.52143 -3.79207" scale="0.3 0.6 0.71" rotation="41.70617086536775 19.895959435917838 11.44254012655767">
     </a-entity>
+    <!-- Plan devant le moniteur -->
+    <a-plane id="image-explosion8" class="img-explosionS" src="#explosion-image3" position="-0.64022 3.2407 -2.12807" scale="1.3661 1.73191 1.98094" rotation="31.870204396356907 17.569177829891565 -80.61859952167761" width="0.8" height="0.5" material="shader: flat; side: double">
+    </a-plane>
 
-    <a-entity id="monitor-B-09" gltf-model="./models3D/Monitor/monitor.glb" position="-0.75638 2.33712 -4.36442" scale="0.2 0.2 0.92" rotation="26.87974200076744 -13.939490197737799 -54.99306213445155">
+    <!-- 9 -->
+    <a-entity id="monitor-B-09" gltf-model="./models3D/Monitor/monitor.glb" position="-0.57718 2.21299 -4.36442" scale="0.2 0.2 0.92" rotation="20.083316634925616 -22.818617148880165 -77.00724653896803">
     </a-entity>
+    <!-- Plan devant le moniteur -->
+    <a-plane id="image-explosion9" class="img-explosionS" src="#explosion-image4" position="-0.97261 1.63631 -2.57184" scale="0.64535 0.81816 0.9358" rotation="-9.050441331886486 -168.99275575824603 -112.29285235209979" width="0.8" height="0.5" material="shader: flat; side: double">
+    </a-plane>
 
     <a-entity id="monitor-B-11" gltf-model="./models3D/Monitor/monitor.glb" position="1.99223 -0.27377 -3.05977" scale="0.3 0.6 0.57" rotation="0 -40.53733696330087 0">
     </a-entity>
@@ -78,20 +129,58 @@
     <a-entity id="monitor-B-12" gltf-model="./models3D/Monitor/monitor.glb" position="-2.80783 -0.62467 -3.80938" scale="0.30614 0.98046 1.05615" rotation="-2.880831793917779 39.751238868381385 4.7125778649510215">
     </a-entity>
 
+    <a-entity id="monitor-B-13" gltf-model="./models3D/Monitor/monitor.glb" position="-1.77923 -0.56821 -2.46677" scale="0.1 0.8 0.36" rotation="-24.409147988163333 13.095523365510097 -71.98011484449019">
+    </a-entity>
+
+    <a-entity id="monitor-B-14" gltf-model="./models3D/Monitor/monitor.glb" position="-3.04143 3.24568 -2.38136" scale="0.3 0.6 0.6" rotation="25.91144332699635 25.263428060703387 -101.59515735921218">
+    </a-entity>
+
+    <a-entity id="monitor-B-15" gltf-model="./models3D/Monitor/monitor.glb" position="-0.01913 5.6892 -2.18032" scale="0.34634 0.34634 0.86584" rotation="70.91613221893225 -51.973574554112105 -96.30274620558878">
+    </a-entity>
+    <!-- Plan devant le moniteur -->
+    <a-plane id="image-explosion" src="#explosion-image1" position="-0.09318 3.98548 -1.41256" rotation="-64.47780547504719 178.7937718017539 -131.16493620811883" width="0.8" height="0.5" material="shader: flat; side: double" scale="1.2652 1.33624 1">
+    </a-plane>
+
+    <a-entity id="monitor-B-16" gltf-model="./models3D/Monitor/monitor.glb" position="1.35583 5.29674 -1.17228" scale="0.34 0.52 0.53" rotation="86.92858371945337 -13.769321732583943 49.01195571108088">
+    </a-entity>
+
+    <a-entity id="monitor-B-17" gltf-model="./models3D/Monitor/monitor.glb" position="-2.39326 4.61296 -0.97766" scale="0.3 0.6 0.49" rotation="46.26519604122371 34.99454325320529 -116.43533721089563">
+    </a-entity>
+
+    <a-entity id="monitor-B-18" gltf-model="./models3D/Monitor/monitor.glb" position="1.02669 4.11938 -2.77002" scale="0.2 0.2 0.42" rotation="43.787726535078036 3.27789154594344 76.19135463870174">
+    </a-entity>
+
+    <a-entity id="monitor-B-19" gltf-model="./models3D/Monitor/monitor.glb" position="2.05615 4.14381 -1.45113" scale="0.29181 0.29181 0.27836" rotation="34.05431951139561 -28.719509480932512 117.56005336273745">
+    </a-entity>
+
+    <a-entity id="monitor-B-20" gltf-model="./models3D/Monitor/monitor.glb" position="-0.53546 5.94855 -0.90605" scale="0.3 0.6 0.71" rotation="57.625230245282545 60.60060007539691 150.93541788690302">
+    </a-entity>
 
 
-     <!-- Moniteur B-10 -->
-     
-      <a-entity id="monitor-B-10" gltf-model="./models3D/Monitor/monitor.glb" position="0.14862 2.26063 -4.40569" scale="0.5 0.5 0.75" rotation="18.147865202973698 8.241997882956893 41.17389307369122"></a-entity>
+
+    <!-- MONITEUR PRINCIPALE B-10-->
+     <a-entity id="monitor-B-10" gltf-model="./models3D/Monitor/monitor.glb" position="0.14862 2.26063 -4.40569" scale="0.5 0.5 0.75" rotation="18.147865202973698 8.241997882956893 41.17389307369122"></a-entity>
       <!-- Plan semi-transparent devant le moniteur -->
-      
-      <a-plane id="image-explosion" src="#image_explosion.jpg" position="-0.13366 2.34778 -2.63011" rotation="-7.371674992153172 179.0928557708122 141.10117029127758" width="0.8" height="0.5" material="depthWrite: false; opacity: 0.35; shader: flat; side: double; transparent: true; color: #ffaa00" scale="1.87 1.74 1"></a-plane>
+      <a-plane id="image-explosion1" src="#explosion-image1" position="-0.1379 2.31729 -2.63011" rotation="-9.6938729358184 178.7118388370502 -38.98977795865252" width="0.8" height="0.5" material="depthWrite: false; opacity: 0.8; shader: flat; side: double; transparent: true" scale="1.87 1.74 1">
+      </a-plane>
       <!-- Spot placé en retrait, derrière le plan -->
-      
-       <a-entity id="screen-light-B-10" position="0.25754 2.27456 -1.70711" light="angle: 45; color: #ffaa00; decay: -3.83; distance: 4.79; intensity: 3.84; penumbra: 1; type: spot; castShadow: true; shadowCameraFar: 499.98; shadowCameraFov: 90.05; shadowBias: -0.88; shadowCameraBottom: -5.22; shadowCameraNear: 1.4" rotation="-54.23962263385451 179.24239775534133 0" scale="0.11 0.1 0.56779"></a-entity>
+      <a-entity id="screen-light-B-10" position="0.25754 2.27456 -1.70711" light="angle: 45; color: #ffaa00; decay: -3.83; distance: 4.79; intensity: 3.84; penumbra: 1; type: spot; castShadow: true; shadowCameraFar: 499.98; shadowCameraFov: 90.05; shadowBias: -0.88; shadowCameraBottom: -5.22; shadowCameraNear: 1.4" rotation="-54.23962263385451 179.24239775534133 0" scale="0.11 0.1 0.56779"></a-entity>
     
+
+
+    <!-- PROJECTION DE L'IMAGE SUR LE MUR ARRIÈRE -->
+    <a-plane id="image-explosion1" src="#explosion-image1" position="-0.14826 1.18544 0.88975" rotation="22.297225555311115 -8.315336480733638 1.3544722276892662" width="3.8" height="2.4" material="depthWrite: false; opacity: 0.65; shader: flat; side: double; transparent: true; blending: additive" scale="1.43927 1.43927 1.43927">
+    </a-plane>
+
+    <!-- FAISCEAU LUMINEUX DU PROJECTEUR -->
     
-    <!-- MURS -->
+    <a-cone id="faisceau-projection" position="-0.08245 0.81316 -0.84993" rotation="-46.85591552800359 -10.50288934254312 11.398422376332597" radius-bottom="1.5" radius-top="0.08" height="1.5" material="depthWrite: false; opacity: 0.12; shader: flat; side: double; transparent: true; color: #ffaa55" geometry="primitive: cone; radiusBottom: 1.45; radiusTop: 0.07; height: 1.5" scale="2.33089 3.34882 1.95268">
+    </a-cone>
+
+
+
+    
+    <!-- MUR SPHERIQUE -->
 
     <a-sphere id="B" position="0.01197 1.61671 -0.11254" rotation="9.837685342396234 179.9998479605043 0" width="4" height="3" material="side: back; blending: none; color: red" scale="2.95 2.99406 2.85">
     </a-sphere>
