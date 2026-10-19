@@ -153,3 +153,125 @@ AFRAME.registerComponent('screen-sequence', {
   }
 });
 
+
+
+AFRAME.registerComponent("projection-effects", {
+  init: function () {
+    this.basePosition = this.el.object3D.position.clone();
+    this.glitchTimer = null;
+    this.off = false;
+
+    this.onContaminate = () => {
+      this.demarrerGlitch();
+    };
+
+    this.onExtinction = () => {
+      console.log("Extinction reçue par :", this.el.id);
+      this.eteindre();
+    };
+
+    this.el.addEventListener(
+      "projection-contaminate",
+      this.onContaminate
+    );
+
+    this.el.addEventListener(
+      "projection-extinction",
+      this.onExtinction
+    );
+  },
+
+  demarrerGlitch: function () {
+    if (this.off || this.glitchTimer !== null) {
+      return;
+    }
+
+    const el = this.el;
+
+    this.glitchTimer = setInterval(() => {
+      if (this.off) {
+        return;
+      }
+
+      el.object3D.position.set(
+        this.basePosition.x + (Math.random() - 0.5) * 0.22,
+        this.basePosition.y + (Math.random() - 0.5) * 0.16,
+        this.basePosition.z + (Math.random() - 0.5) * 0.12
+      );
+
+      el.object3D.visible = Math.random() > 0.18;
+
+      el.setAttribute(
+        "material",
+        "color",
+        Math.random() > 0.55 ? "#789bff" : "#ffffff"
+      );
+    }, 45 + Math.random() * 90);
+  },
+
+  actualiserPositionBase: function () {
+    this.basePosition.copy(this.el.object3D.position);
+  },
+
+  eteindre: function () {
+    if (this.off) {
+      return;
+    }
+
+    this.off = true;
+
+    if (this.glitchTimer !== null) {
+      clearInterval(this.glitchTimer);
+      this.glitchTimer = null;
+    }
+
+    const el = this.el;
+
+    // Remettre la projection à sa position initiale
+    el.object3D.visible = true;
+    el.object3D.position.copy(this.basePosition);
+
+    // Retirer les animations précédentes
+    el.removeAttribute("animation__apparition");
+    el.removeAttribute("animation__disparition");
+    el.removeAttribute("animation__extinction");
+
+    // Récupérer l'opacité actuelle
+    const material = el.getAttribute("material") || {};
+    const opacity = Number.isFinite(material.opacity)
+      ? material.opacity
+      : 0.65;
+
+    // Faire disparaître la projection progressivement
+    el.setAttribute("animation__extinction", {
+      property: "material.opacity",
+      from: opacity,
+      to: 0,
+      dur: 300,
+      easing: "linear"
+    });
+
+    // Masquer complètement la projection à la fin
+    setTimeout(() => {
+      el.object3D.visible = false;
+    }, 300);
+  },
+
+  remove: function () {
+    if (this.glitchTimer !== null) {
+      clearInterval(this.glitchTimer);
+      this.glitchTimer = null;
+    }
+
+    this.el.removeEventListener(
+      "projection-contaminate",
+      this.onContaminate
+    );
+
+    this.el.removeEventListener(
+      "projection-extinction",
+      this.onExtinction
+    );
+  }
+});
+
