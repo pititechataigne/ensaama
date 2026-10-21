@@ -29,7 +29,7 @@
     "event": "projection-sequence-glitch"
     },
 
-    {"time":10000,"target":"#image-explosion1","event":"projection-contaminate"
+    {"time":10000,"target":"#projection-principale","event":"projection-contaminate"
     },
 
     {
@@ -231,12 +231,18 @@ AFRAME.registerComponent("random-projections", {
     const cfg = configProjections;
     const contamination = this.phase === "contamination";
 
-    const xMin = contamination ? -5.5 : cfg.xMin;
-    const xMax = contamination ? 5.5 : cfg.xMax;
-    const yMin = contamination ? -0.5 : cfg.yMin;
-    const yMax = contamination ? 6.5 : cfg.yMax;
-    const zMin = contamination ? -2.5 : cfg.zMin;
-    const zMax = contamination ? 3.5 : cfg.zMax;
+   // Zone initiale : inchangée
+  // Zone de contamination : projections beaucoup plus dispersées
+  
+
+  const xMin = contamination ? -3.5 : cfg.xMin;
+  const xMax = contamination ?  3.5 : cfg.xMax;
+
+  const yMin = contamination ?  0.5 : cfg.yMin;
+  const yMax = contamination ?  4.5 : cfg.yMax;
+
+  const zMin = contamination ? -1.5 : cfg.zMin;
+  const zMax = contamination ?  1.5 : cfg.zMax;
 
     plan.setAttribute("src", choisirImage());
 
@@ -439,30 +445,35 @@ AFRAME.registerComponent("random-projections", {
   },
 
   eteindreToutes: function () {
-    if (this.phase === "off") {
-      return;
-    }
+  if (this.phase === "off") {
+    return;
+  }
 
-    this.phase = "off";
-    this.annulerTimers();
+  this.phase = "off";
+  this.annulerTimers();
 
-   const principale = document.querySelector("#image-explosion1");
+  // Éteindre la projection principale au dos du joueur.
+  const principale = document.querySelector("#projection-principale");
 
-   if (principale) {
+  if (principale) {
     const effets = principale.components["projection-effects"];
 
-   if (effets) {
-    effets.eteindre();
-   } else {
-    console.warn("projection-effects absent sur la projection principale");
+    if (effets) {
+      effets.eteindre();
+    } else {
+      console.warn(
+        "projection-effects absent sur la projection principale"
+      );
     }
   }
 
-    // Toutes les projections reçoivent le même événement.
-    this.projections.forEach(plan => {
-      plan.emit("projection-extinction");
-    });
-  },
+  // Éteindre toutes les projections secondaires.
+  this.projections.forEach(plan => {
+    plan.emit("projection-extinction");
+  });
+ },
+
+ 
 
   remove: function () {
     this.phase = "off";
@@ -704,7 +715,7 @@ AFRAME.registerComponent("random-projections", {
 
     <!-- PROJECTION DE L'IMAGE PRINCIPALE SUR LE MUR ARRIÈRE -->
    
-    <a-plane id="image-explosion1" class="img-explosions-MUR"
+    <a-plane id="projection-principale" class="img-explosions-MUR"
      projection-effects
      src="#explosion-image1"
      position="-0.14826 1.18544 0.88975"
